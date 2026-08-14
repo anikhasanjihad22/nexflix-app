@@ -49,9 +49,9 @@ class MainActivity : AppCompatActivity() {
         requestNotificationPermissionIfNeeded()
 
         // Subscribe to the "new posts" topic so the RSS -> FCM script can notify everyone
-        FirebaseMessaging.getInstance().subscribeToTopic("new_posts")
+        //FirebaseMessaging.getInstance().subscribeToTopic("new_posts")
         // Subscribe to "app_updates" so users get a push notification whenever you release an update
-        FirebaseMessaging.getInstance().subscribeToTopic("app_updates")
+        //FirebaseMessaging.getInstance().subscribeToTopic("app_updates")
 
         // Force-update check runs every launch
         checkForForceUpdate()
