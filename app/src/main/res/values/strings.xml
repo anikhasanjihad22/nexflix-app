@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Nexflix</string>
+
+    <!-- CHANGE THIS to your Blogger site URL -->
+    <string name="base_url">https://rnexflix.top</string>
+
+    <!-- Where the app checks for the latest version (force update) -->
+    <string name="version_check_url">https://raw.githubusercontent.com/anikhasanjihad22/nexflix-app/main/version.json</string>
+</resources>

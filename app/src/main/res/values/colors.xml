@@ -1,0 +1,5 @@
+<resources>
+    <!-- Change this to match your brand color -->
+    <color name="brand">#E50914</color>
+    <color name="brand_dark">#B00710</color>
+</resources>

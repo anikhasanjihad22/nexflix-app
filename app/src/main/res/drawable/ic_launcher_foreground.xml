@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Placeholder "N" mark. Replace this file using Android Studio's
+         Image Asset Studio (right-click res folder > New > Image Asset)
+         with your real logo before publishing. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30h10l20,32v-32h10v48h-10l-20,-32v32h-10z" />
+</vector>

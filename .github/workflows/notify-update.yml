@@ -1,0 +1,39 @@
+name: Notify App Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Notification title'
+        default: 'Update available'
+        required: false
+      body:
+        description: 'Notification message'
+        default: 'A new version of Nexflix is here. Tap to update.'
+        required: false
+      apk_url:
+        description: 'Direct link to the new APK (e.g. your GitHub Release download link)'
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install firebase-admin
+
+      - name: Send update notification
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          UPDATE_TITLE: ${{ github.event.inputs.title }}
+          UPDATE_BODY: ${{ github.event.inputs.body }}
+          UPDATE_APK_URL: ${{ github.event.inputs.apk_url }}
+        run: python scripts/notify_update.py
